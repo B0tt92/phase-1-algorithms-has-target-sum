@@ -1,6 +1,18 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+  numbers = {};
+  for (let i = 0; i < array.lenght; i +=1)  {
+      let diff = target - array[i];
+
+        if (numbers[diff] !== undefined && numbers[diff]  !== i) {
+          return true
+        }else return false 
+
+  }
+
+} 
+
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,7 +20,10 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
-*/
+  create object of array 
+  loop through array for elements do math 4 target
+  if target exists w/ math on array. return true else return false 
+  */ 
 
 /*
   Add written explanation of your solution here
